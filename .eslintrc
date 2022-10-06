@@ -3,7 +3,12 @@
         "browser": true,
         "es2021": true
     },
-    "extends": ["plugin:react/recommended", "standard-with-typescript", "prettier"],
+    "extends": [
+        "plugin:react/recommended",
+        "standard-with-typescript",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": ["react", "react-hooks", "prettier"],
     "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -31,13 +36,12 @@
             "error",
             {
                 "trailingComma": "es5",
-                "singleQuote": true,
                 "printWidth": 100,
                 "tabWidth": 4,
                 "semi": true,
-                "endOfLine": "auto"
+                "endOfLine": "auto",
+                "usePrettierrc": false
             }
         ]
-    },
-    "plugins": ["react", "react-hooks", "prettier"]
+    }
 }

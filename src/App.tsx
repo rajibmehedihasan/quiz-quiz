@@ -1,12 +1,8 @@
-import React from 'react';
+import React from "react";
+import Header from "./components/header";
+import "./index.css";
 
 function App() {
-    return (
-        <div>
-            <p>Hello world with TypeScript</p>
-            <p>Hello TypeScript React</p>
-        </div>
-    );
+    return <Header />;
 }
-console.log('hello');
 export default App;
