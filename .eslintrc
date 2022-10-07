@@ -26,6 +26,7 @@
         "jsx-a11y/click-events-have-key-events": 0,
         "@typescript-eslint/explicit-function-return-type": 0,
         "@typescript-eslint/triple-slash-reference": 0,
+        "@typescript-eslint/no-unused-vars": 0,
         "react/jsx-filename-extension": [
             1,
             {
