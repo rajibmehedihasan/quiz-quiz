@@ -1,8 +1,13 @@
 import React from "react";
-import Header from "./components/header";
+import Layout from "./components/layout";
+import Home from "./components/pages/home";
 import "./index.css";
 
 function App() {
-    return <Header />;
+    return (
+        <Layout>
+            <Home />
+        </Layout>
+    );
 }
 export default App;

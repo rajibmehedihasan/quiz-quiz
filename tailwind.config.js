@@ -2,7 +2,12 @@
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
-        extend: {},
+        extend: {
+            gridTemplateColumns: {
+                // Simple 16 column grid
+                5: "repeat(auto-fit, minmax(300px, 1fr))",
+            },
+        },
         fontFamily: {
             sans: ["Montserrat", "sans-serif"],
         },
