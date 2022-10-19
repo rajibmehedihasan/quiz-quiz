@@ -27,20 +27,25 @@ module.exports = {
             "2xl": "1536px",
             // => @media (min-width: 1536px) { ... }
         },
-        container: {
-            center: true,
-            padding: "15px",
-            screens: {
-                sm: "540px",
-                md: "720px",
-                lg: "960px",
-                xl: "1140px",
-                "2xl": "1320px",
-            },
+        // container: {
+        //     center: true,
+        //     // padding: "15px",
+        //     screens: {
+        //         sm: "540px",
+        //         md: "720px",
+        //         lg: "960px",
+        //         xl: "1140px",
+        //         "2xl": "90%",
+        //     },
+        // },
+        colors: {
+            "primary-color": "#002333",
+            white: "#ffffff",
         },
     },
 
     plugins: [
+        require("@neojp/tailwindcss-line-clamp-utilities"),
         /* Custom Container */
         // function ({ addComponents }) {
         //     addComponents({

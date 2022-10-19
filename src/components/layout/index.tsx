@@ -9,7 +9,7 @@ function Layout(props: Props) {
         <>
             <Header />
             <div className="w-full py-16">
-                <div className="container">{props.children}</div>
+                <div className="w-[90%] mx-auto my-8">{props.children}</div>
             </div>
         </>
     );
