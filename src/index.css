@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+    * {
+        color: #002333;
+    }
     body {
         background-color: #f2f4f8;
     }

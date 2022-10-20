@@ -4,7 +4,7 @@ interface Props {
     className?: string;
 }
 
-function Button(props: Props) {
+function Button(props: any) {
     const { btnText, className, ...rest } = props;
     return (
         <button
