@@ -12,7 +12,29 @@
     h1 {
         font-size: 2em;
     }
+    h4 {
+        color: #7c83a7;
+        font-weight: 600;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
     a {
         color: blue;
+    }
+}
+
+@layer components {
+    .checkbox {
+        @apply flex h-[58px] w-full cursor-pointer items-center rounded bg-[#e4e8ee] px-5 font-medium;
+    }
+    .checkbox:hover {
+        @apply bg-[hsla(229,_20%,_57%,_0.253)];
+    }
+    .checkbox.correct {
+        @apply bg-[#00ff84] font-semibold;
+    }
+    .checkbox.wrong {
+        @apply bg-[#ffc0c7] font-semibold;
     }
 }
