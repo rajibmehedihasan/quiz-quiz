@@ -7,12 +7,12 @@ function ProgressBar() {
                 <img className="h-6 w-6" src={arrowLeft} alt="arrow left" />
             </div>
             <div className="relative my-0 mx-auto w-full">
-                <div className="top[-70px] absolute left-[calc(70%-65px)] hidden w-[130px] rounded-lg bg-primary-color py-3 px-4 text-xs font-semibold text-white after:absolute after:bottom-0 after:left-1/2 after:h-[15px] after:w-[15px] after:-translate-x-2/4 after:translate-y-full after:rotate-[45deg] after:rounded after:bg-primary-color">
+                <div className="absolute left-[calc(70%-65px)] top-[-70px] w-[130px] rounded-lg bg-primary-color py-3 px-4 text-xs font-semibold text-white after:absolute after:bottom-0 after:left-1/2 after:h-[15px] after:w-[15px] after:-translate-x-1/2 after:translate-y-1/2 after:rotate-45 after:rounded after:bg-primary-color">
                     24% Cimplete!
                 </div>
                 <div className="mx-0 my-auto h-1 w-full rounded-[20px] border-none bg-[#e4e8ee] outline-none">
                     <div
-                        className="relative h-1 bg-primary-color transition-[width_0.3s_ease]"
+                        className="relative h-1 bg-primary-color transition-[width_0.3s_ease] after:absolute after:top-1/2 after:right-0 after:h-3 after:w-3 after:-translate-y-1/2 after:cursor-pointer after:rounded-full after:bg-primary-color"
                         style={{ width: "20%" }}
                     ></div>
                 </div>
