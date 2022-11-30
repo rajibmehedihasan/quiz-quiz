@@ -80,7 +80,6 @@
     }
     .floatingBtn:hover svg {
         fill: #002333;
-
     }
     .floatingBtn svg {
         height: 24px;
@@ -92,7 +91,7 @@
         display: block;
     }
     .floatingBtn .close {
-       display: none;
+        display: none;
     }
     .floatingBtn img {
         transform: scale(0);

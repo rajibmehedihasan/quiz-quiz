@@ -15,11 +15,3 @@ function Videos() {
 }
 
 export default Videos;
-
-// width: 100%;
-// display: grid;
-// margin: 3rem auto;
-// grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-// justify-items: center;
-// gap: 20px;
-// row-gap: 20px;

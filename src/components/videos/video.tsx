@@ -18,11 +18,3 @@ function Video() {
 }
 
 export default Video;
-
-// font-size: 16px;
-// font-weight: 500;
-// margin: 0.5rem 0;
-// display: -webkit-box;
-// -webkit-box-orient: vertical;
-// -webkit-line-clamp: 3;
-// overflow: hidden;
