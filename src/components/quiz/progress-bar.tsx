@@ -1,6 +1,7 @@
 import arrowLeft from "../../images/icons/arrow-left.svg";
 import arrowRight from "../../images/icons/arrow-right.svg";
 import Button from "../button";
+import { Link } from "react-router-dom";
 
 function ProgressBar() {
     return (
@@ -20,9 +21,9 @@ function ProgressBar() {
                 </div>
             </div>
 
-            <a href="result.html">
+            <Link to="/result">
                 <Button className="mr-2.5" btnText="Next Question" btnIcon={arrowRight} />
-            </a>
+            </Link>
         </div>
     );
 }

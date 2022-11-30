@@ -1,5 +1,4 @@
-import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface Props {
     brandSrc: string;
@@ -10,10 +9,10 @@ interface Props {
 function Brand(props: Props) {
     const { brandSrc, brandAlt, brandText } = props;
     return (
-        <a href="index.html" className="flex items-center">
-            <img className="w-8 mr-2.5" src={brandSrc} alt={brandAlt} />
-            <span className="block font-bold text-[18px] leading-[19px]">{brandText}</span>
-        </a>
+        <Link to="/" className="flex items-center">
+            <img className="mr-2.5 w-8" src={brandSrc} alt={brandAlt} />
+            <span className="block text-[18px] font-bold leading-[19px]">{brandText}</span>
+        </Link>
     );
 }
 

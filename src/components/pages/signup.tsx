@@ -3,6 +3,7 @@ import SignupImage from "../../images/signup.svg";
 import Form from "../form";
 import TextInput from "../form/text-input";
 import Button from "../button";
+import { Link } from "react-router-dom";
 
 function Signup() {
     return (
@@ -21,7 +22,7 @@ function Signup() {
                     </label>
                     <Button type="submit" className="mt-8 h-[44px]" btnText="Signup Now" />
                     <div className="mt-4 text-center">
-                        Already have an account? <a href="login.html">Login</a> instead.
+                        Already have an account? <Link to="/login">Login</Link> instead.
                     </div>
                 </Form>
             </div>

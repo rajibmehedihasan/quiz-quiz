@@ -3,6 +3,7 @@ import LoginImage from "../../images/login.svg";
 import Form from "../form";
 import TextInput from "../form/text-input";
 import Button from "../button";
+import { Link } from "react-router-dom";
 
 function Login() {
     return (
@@ -17,7 +18,7 @@ function Login() {
                     <Button type="submit" className="mt-8 h-[44px]" btnText="Login Now" />
 
                     <div className="mt-4 text-center">
-                        Don&apos;t have an account? <a href="signup.html">Signup</a> instead.
+                        Don&apos;t have an account? <Link to="/signup">Signup</Link> instead.
                     </div>
                 </Form>
             </div>
