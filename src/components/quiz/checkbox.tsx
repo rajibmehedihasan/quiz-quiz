@@ -6,7 +6,7 @@ interface Props {
 function CheckBox(props: Props) {
     const { id, className, text } = props;
     return (
-        <label className={`checkbox ${className}`} htmlFor={id}>
+        <label className={`checkbox ${className ?? ""}`} htmlFor={id}>
             <input className="mr-2" type="checkbox" id={id} /> {text}
         </label>
     );
