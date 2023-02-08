@@ -31,28 +31,28 @@ export const AuthProvider = ({ children }) => {
         return unsubscribe;
     }, []);
 
-    //Signup
+    // Signup
     const signUp = async (email, password, userName) => {
         await createUserWithEmailAndPassword(auth, email, password);
 
-        //Update Profile
+        // Update Profile
         await updateProfile(auth.currentUser, {
             displayName: userName,
         });
 
-        //Update Current User
+        // Update Current User
         const user = auth.currentUser;
         setCurrentUser({
             ...user,
         });
     };
 
-    //Login
+    // Login
     const login = async (email, password) => {
         return signInWithEmailAndPassword(auth, email, password);
     };
 
-    //Logout
+    // Logout
     const logout = () => {
         return signOut(auth);
     };
