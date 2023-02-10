@@ -17,7 +17,6 @@ function LoginForm() {
     const navigate = useNavigate();
 
     const handleChange = (e: any) => {
-        const isChecked = e.target.checked;
         setData({
             ...data,
             [e.target.name]: e.target.value,

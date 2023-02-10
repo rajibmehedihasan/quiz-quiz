@@ -8,13 +8,12 @@ import {
     updateProfile,
 } from "firebase/auth";
 import "../firebase";
-import { async } from "@firebase/util";
 
 const AuthContext = React.createContext();
 
-export function useAuth() {
+export const useAuth = () => {
     return useContext(AuthContext);
-}
+};
 
 export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
