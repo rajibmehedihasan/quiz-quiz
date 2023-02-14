@@ -4,7 +4,6 @@ import { useAuth } from "../../contexts/AuthContext";
 const RouteProvider = (props: any) => {
     const { component: Component, routeType, ...rest } = props;
 
-    console.log(props);
     const { currentUser } = useAuth();
 
     return routeType === "public" ? (

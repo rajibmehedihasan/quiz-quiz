@@ -1,14 +1,20 @@
 import videoImg from "../../images/3.jpg";
 
-function Video() {
+interface Props {
+    video: {
+        title: string;
+        youtubeID: string;
+        noq: number;
+    };
+}
+function Video(props: Props) {
+    const { title, youtubeID, noq } = props.video;
     return (
         <div className="h-fit max-w-[400px] cursor-pointer rounded border border-[#e5e5e5] bg-white p-2.5 pb-4 hover:shadow-[0_0_15px_0_#e5e5e5]">
-            <img src={videoImg} alt="Video Image" />
-            <p className="my-2 font-medium line-clamp-3">
-                #23 React Hooks Bangla - React useReducer hook Bangla
-            </p>
+            <img src={`//img.youtube.com/vi/${youtubeID}/0.jpg`} alt="Video Image" />
+            <p className="my-2 font-medium line-clamp-3">{title}</p>
             <div className="flex items-center justify-between text-[15px]">
-                <p>10 Questions</p>
+                <p>{noq} Questions</p>
                 <p>Score : Not taken yet</p>
             </div>
         </div>
