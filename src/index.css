@@ -1,3 +1,110 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    * {
+        color: #002333;
+    }
+    body {
+        background-color: #f2f4f8;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h1,
+    h2,
+    h3,
+    h5,
+    h6 {
+        font-weight: bold;
+    }
+    h4 {
+        color: #7c83a7;
+        font-weight: 600;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+    a {
+        color: blue;
+    }
+}
+
+@layer components {
+    .checkbox {
+        @apply flex h-[58px] w-full cursor-pointer items-center rounded bg-[#e4e8ee] px-5 font-medium;
+    }
+    .checkbox:hover {
+        @apply bg-[hsla(229,_20%,_57%,_0.253)];
+    }
+    .checkbox.correct {
+        @apply bg-[#00ff84] font-semibold;
+    }
+    .checkbox.wrong {
+        @apply bg-[#ffc0c7] font-semibold;
+    }
+    .miniPlayer {
+        width: 320px;
+        position: fixed;
+        bottom: 100px;
+        right: 50px;
+        background-color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid hsl(0, 0%, 86%);
+        border-radius: 5px;
+    }
+    .miniPlayer img {
+        width: 300px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        animation: miniplayerAnim 0.3s ease forwards;
+    }
+    .miniPlayer p {
+        font-weight: 500;
+        font-size: 14px;
+        margin: 10px 0;
+        color: #002333;
+    }
+    .floatingBtn {
+        width: 60px;
+        height: 60px;
+        bottom: 80px;
+        right: 10px;
+        overflow: hidden;
+        border-radius: 50px;
+        background-color: #002333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        user-select: none;
+    }
+    .floatingBtn:hover {
+        background-color: #00ff84;
+    }
+    .floatingBtn:hover svg {
+        fill: #002333;
+    }
+    .floatingBtn svg {
+        height: 24px;
+        width: 24px;
+        font-weight: 500;
+        fill: #00ff84;
+    }
+    .floatingBtn .open {
+        display: block;
+    }
+    .floatingBtn .close {
+        display: none;
+    }
+    .floatingBtn img {
+        transform: scale(0);
+        display: none;
+    }
+    .floatingBtn p {
+        display: none;
+    }
+}
