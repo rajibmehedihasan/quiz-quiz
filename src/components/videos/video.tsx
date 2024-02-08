@@ -1,14 +1,7 @@
 import videoImg from "../../images/3.jpg";
+import { VideoType } from "../../hooks/useVideoList";
 
-interface Props {
-    video: {
-        title: string;
-        youtubeID: string;
-        noq: number;
-    };
-}
-function Video(props: Props) {
-    const { title, youtubeID, noq } = props.video;
+function Video({ title, youtubeID, noq }: VideoType) {
     return (
         <div className="h-fit max-w-[400px] cursor-pointer rounded border border-[#e5e5e5] bg-white p-2.5 pb-4 hover:shadow-[0_0_15px_0_#e5e5e5]">
             <img src={`//img.youtube.com/vi/${youtubeID}/0.jpg`} alt="Video Image" />

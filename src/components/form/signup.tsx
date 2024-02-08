@@ -19,7 +19,7 @@ function SignupForm() {
     const { signUp } = useAuth();
     const navigate = useNavigate();
 
-    const handleChange = (e: any) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const isChecked = e.target.checked;
         setData({
             ...data,
@@ -33,14 +33,14 @@ function SignupForm() {
         const { email, password, username, confirmPassword } = data;
 
         if (password !== confirmPassword) {
-            return setError("Password don't Match");
+            setError("Password don't Match");
         }
 
         try {
             setError("");
             setLoading(true);
             await signUp(email, password, username);
-            navigate("/");
+            navigate("/"); // Return the promise
         } catch (err) {
             console.log(err);
             setLoading(false);
@@ -51,10 +51,15 @@ function SignupForm() {
     return (
         <Form
             className="h-[500px]"
-            onSubmit={(e: React.FormEvent<HTMLInputElement>) => handleSubmit(e)}
+            onSubmit={(e: React.FormEvent<HTMLInputElement>) => {
+                e.preventDefault(); // Remove the nested function call
+                handleSubmit(e);
+            }}
         >
             <TextInput
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    handleChange(e);
+                }}
                 value={data.username}
                 name="username"
                 type="text"
@@ -63,7 +68,9 @@ function SignupForm() {
                 required
             />
             <TextInput
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    handleChange(e);
+                }}
                 value={data.email}
                 name="email"
                 type="email"
@@ -72,7 +79,9 @@ function SignupForm() {
                 required
             />
             <TextInput
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    handleChange(e);
+                }}
                 value={data.password}
                 name="password"
                 type="password"
@@ -81,7 +90,9 @@ function SignupForm() {
                 required
             />
             <TextInput
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    handleChange(e);
+                }}
                 value={data.confirmPassword}
                 name="confirmPassword"
                 type="password"
@@ -93,7 +104,9 @@ function SignupForm() {
                 <input
                     type="checkbox"
                     required
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                        handleChange(e);
+                    }}
                 />{" "}
                 <span>I agree to the Terms &amp; Conditions</span>
             </label>
