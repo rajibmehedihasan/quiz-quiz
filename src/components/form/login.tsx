@@ -41,14 +41,18 @@ function LoginForm() {
     return (
         <Form
             className="h-[330px]"
-            onSubmit={(e: React.FormEvent<HTMLInputElement>) => handleSubmit(e)}
+            onSubmit={(e: React.FormEvent<HTMLInputElement>) => {
+                handleSubmit(e);
+            }}
         >
             <TextInput
                 name="email"
                 type="email"
                 placeholder="Enter email"
                 required
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    handleChange(e);
+                }}
                 icon={""}
             />
             <TextInput
@@ -56,7 +60,9 @@ function LoginForm() {
                 type="password"
                 placeholder="Enter password"
                 required
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    handleChange(e);
+                }}
                 icon={""}
             />
             <Button type="submit" className="mt-8 h-[44px]" btnText="Login Now" />
